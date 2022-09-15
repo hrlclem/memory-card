@@ -9,12 +9,38 @@ function App() {
   const [highScore, setHighScore] = useState(0);
   const [reset, setReset] = useState("true");
 
+  const checkEndGame = () => {
+      if(currentScore>highScore){
+        setHighScore(currentScore);
+      }
+      setCurrentScore(0);
+      setReset(true);
+  }
 
+  const checkHighScore = () => {
+      if (currentScore > highScore) {
+        setHighScore(currentScore);
+      }  
+  }
+
+  const incrementScore = () => {
+    setCurrentScore (() => currentScore + 1)
+    setReset(false);
+  }
 
   return (
     <div className="App">
-      <Header />
-      <Cardboard />
+      <Header 
+        score={currentScore} 
+        highScore={highScore}
+        />
+
+      <Cardboard 
+        reset={reset}
+        checkEndGame={checkEndGame}
+        checkHighScore={checkHighScore}
+        incrementScore={incrementScore}
+      />
     </div>
   );
 }
