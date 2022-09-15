@@ -26,7 +26,7 @@ const Cardboard = (props) => {
 
     const randomizeArray = (array) => {
         let randomizedArr = array.slice(0);
-        for (let i = randomizedArr.length -1; i > 0; i--){
+        for (let i = randomizedArr.length - 1; i >= 0; i--){
             const j = Math.floor(Math.random() * i + 1);
             const temp = randomizedArr[i];
             randomizedArr[i] = randomizedArr[j];

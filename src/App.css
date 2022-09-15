@@ -1,31 +1,53 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 
 .header{
   padding:20px;
   background-color: #0077B6;
-  color:antiquewhite;
+  color:rgb(247, 242, 235);
   display:flex;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .leftSide{
   text-align: left;
 }
-
-.titleHeader{
-  font-size: 40px;
-}
-.instructions{
-  font-size:10px;
-}
+  .titleHeader{
+    font-size: 40px;
+  }
+  .instructions{
+    font-size:10px;
+  }
 
 .rightSide{
-  text-align: right;
   position:absolute;
   right:20px;
   vertical-align: middle;
+}
 
+
+
+
+/* CARDBOARD PART */
+.cardBoard{
+  display:grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(100px, 120px);
+}
+.card{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  /* width:120px; */
+  margin:10px;
+  background-color: #CAF0F8;
+
+}
+.signKanji{
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+
+}
+.titleKanji{
+  font-family: 'Playfair Display', serif;
 }

@@ -25,9 +25,9 @@ useEffect(() => {
 
 
     return(
-        <div className='card'>
-            <span className='sign' alt='{props.name}' onClick={handleClick}>{props.sign}</span>
-            <span className='title'>{props.name}</span>
+        <div className='card' onClick={handleClick}>
+            <span className='signKanji'>{props.sign}</span>
+            <span className='titleKanji' alt=''>{props.name}</span>
         </div>
     )
 }
