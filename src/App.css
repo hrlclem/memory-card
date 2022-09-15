@@ -1,3 +1,31 @@
 .App {
   text-align: center;
 }
+
+.header{
+  padding:20px;
+  background-color: #0077B6;
+  color:antiquewhite;
+  display:flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.leftSide{
+  text-align: left;
+}
+
+.titleHeader{
+  font-size: 40px;
+}
+.instructions{
+  font-size:10px;
+}
+
+.rightSide{
+  text-align: right;
+  position:absolute;
+  right:20px;
+  vertical-align: middle;
+
+}
