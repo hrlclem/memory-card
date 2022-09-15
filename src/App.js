@@ -7,12 +7,10 @@ function App() {
 
   const [currentScore, setCurrentScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
-  const [reset, setReset] = useState("true");
+  const [reset, setReset] = useState(true);
 
   const checkEndGame = () => {
-      if(currentScore>highScore){
-        setHighScore(currentScore);
-      }
+      checkHighScore();
       setCurrentScore(0);
       setReset(true);
   }
@@ -24,7 +22,7 @@ function App() {
   }
 
   const incrementScore = () => {
-    setCurrentScore (() => currentScore + 1)
+    setCurrentScore (() => currentScore + 1);
     setReset(false);
   }
 

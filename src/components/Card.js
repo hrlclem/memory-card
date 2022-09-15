@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '../App.css';
 
 
 const Card = (props) => {
@@ -12,6 +13,7 @@ const handleClick = () => {
     } else {
         props.incrementScore();
     }
+    props.checkHighScore();
     props.randomizeCards();
 }
 
@@ -23,7 +25,7 @@ useEffect(() => {
 
 
     return(
-        <div classname='card'>
+        <div className='card'>
             <span className='sign' alt='{props.name}' onClick={handleClick}>{props.sign}</span>
             <span className='title'>{props.name}</span>
         </div>
